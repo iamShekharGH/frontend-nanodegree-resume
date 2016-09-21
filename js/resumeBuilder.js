@@ -16,7 +16,7 @@
 var bio = {
 	name : "ShekharGH",
 	role : "AndroidDev" ,
-	image : "images/fry.img"  ,
+	// image : "images/fry.img"  ,
   	contacts : {
 		mobile : "123456789" ,
 		email : "shekhar1990@gmail.com" ,
@@ -65,7 +65,7 @@ bio.display = function(){
 		
 	}
 	
-}
+};
 
 bio.display();
 
@@ -86,7 +86,7 @@ bio.display();
 var education ={
 	schools: [
 		{
-			name : ["School Name"] ,
+			name : "School Name" ,
 			location : "Bangalore" ,
 			degree : "HighSchool" ,
 			majors : ["10th" , "12th"] ,
@@ -95,7 +95,7 @@ var education ={
 		
 		},
 		{
-			name : ["School Name2"] ,
+			name : "School Name2" ,
 			location : "Bangalore" ,
 			degree : "Computer Science" ,
 			majors : ["Android"] ,
@@ -220,7 +220,7 @@ projects: array of objects with
 */
 
 var projects ={
-	project :[
+	projects :[
 		 {
 			title : "Ganpati Bappa Livewallpaper" ,
 			dates : "September 1, 2013" ,
@@ -242,15 +242,17 @@ projects.display = function(){
 
 	var start = HTMLprojectStart;
 	$("#projects").append(start);
-	for(var num=0 ; num < projects.project.length ; num++){
-		var title = HTMLprojectTitle.replace("%data%" , projects.project[num].title).replace("#","iamshekhargh.com");
-		var dates = HTMLprojectDates.replace("%data%" , projects.project[num].dates);
-		var description = HTMLprojectDescription.replace("%data%" , projects.project[num].description);
+	for(var num=0 ; num < projects.projects.length ; num++){
+		var title = HTMLprojectTitle.replace("%data%" , projects.projects[num].title).replace("#","iamshekhargh.com");
+		var dates = HTMLprojectDates.replace("%data%" , projects.projects[num].dates);
+		var description = HTMLprojectDescription.replace("%data%" , projects.projects[num].description);
 		//var images = HTMLprojectTitle.replace("%data%" , projects.projects[num].)
 		$(".project-entry").append(title,dates,description);
-		for(var img in projects.project[num].images){
-			var image = HTMLprojectImage.replace("%data%" , projects.project[num].images[img]);
-			//console.log(projects.project[num].images[img]);
+		//for(var img in projects.projects[num].images){
+		for(var img = 0 ; img < projects.projects[num].images.length ; img++){
+			var image = HTMLprojectImage.replace("%data%" , projects.projects[num].images[img]);
+
+			//console.log(projects.projects[num].images[img]);
 			$(".project-entry").append(image);
 
 		}
@@ -301,10 +303,10 @@ var map;
       }
 
 
-var YOUR_API_KEY = "AIzaSyCOvJENkqwfmygX5hPDotlKt1i01x3Tg4Y";
+// var YOUR_API_KEY = "AIzaSyCOvJENkqwfmygX5hPDotlKt1i01x3Tg4Y";
 
-var mapText = "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCOvJENkqwfmygX5hPDotlKt1i01x3Tg4Y&callback=initMap' async defer></script>";
-$('body:last').append(mapText);
+// var mapText = "<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCOvJENkqwfmygX5hPDotlKt1i01x3Tg4Y&callback=initMap' async defer></script>";
+// $('body:last').append(mapText);
 
 
 
