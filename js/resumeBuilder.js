@@ -289,18 +289,18 @@ function futer(){
 
 futer();
 
-var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          //center: {lat: 12.9793802, lng: 77.6363849},
+// var map;
+//       function initMap() {
+//         map = new google.maps.Map(document.getElementById('map'), {
+//           center: {lat: -34.397, lng: 150.644},
+//           //center: {lat: 12.9793802, lng: 77.6363849},
           
-          center: {lat:12.9793802, lng:77.6363849} ,
-          //center: {lat:12.979, lng:77.636}
+//           center: {lat:12.9793802, lng:77.6363849} ,
+//           //center: {lat:12.979, lng:77.636}
           
-          zoom: 15
-        });
-      }
+//           zoom: 15
+//         });
+//       }
 
 
 // var YOUR_API_KEY = "AIzaSyCOvJENkqwfmygX5hPDotlKt1i01x3Tg4Y";
